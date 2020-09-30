@@ -10,9 +10,13 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
-  static targets = ['output'];
+  static targets = ['name'];
 
   connect() {
-    this.outputTarget.textContent = 'Hello, Stimulus!';
+    this.nameTarget.textContent = 'Hello, Stimulus!';
+  }
+
+  log() {
+    console.log(this.nameTarget.value);
   }
 }
